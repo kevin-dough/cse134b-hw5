@@ -9,7 +9,7 @@
 - [x] main
 - [x] h1
 - [x] h2
-- [ ] h3
+- [x] h3
 - [x] p
 - [x] section
 - [x] header
@@ -17,15 +17,15 @@
 - [x] aside
 - [x] nav
 - [x] div
-- [ ] span
+- [x] span
 - [x] br
 - [x] b
 - [x] i
 - [x] strong
-- [ ] em
+- [x] em
 - [ ] code
 - [ ] pre
-- [ ] hr
+- [x] hr
 - [x] a
 - [x] img
 - [x] picture
@@ -34,7 +34,7 @@
 - [ ] video
 - [ ] canvas*
 - [ ] svg*
-- [ ] ul
+- [x] ul
 - [x] ol
 - [ ] optgroup
 - [x] li
@@ -47,8 +47,8 @@
 - [ ] datalist
 - [ ] select
 - [ ] option
-- [ ] details
-- [ ] summary
+- [x] details
+- [x] summary
 - [x] button*
 - [ ] template*
 - [ ] table
@@ -58,9 +58,9 @@
 - [ ] caption
 - [ ] col
 - [ ] colgroup
-- [ ] figure
-- [ ] figcaption
-- [ ] blockquote
+- [x] figure
+- [x] figcaption
+- [x] blockquote
 - [ ] cite
 - [ ] ins
 - [ ] del
@@ -75,4 +75,4 @@
 - [ ] dfn
 - [ ] kbd
 - [ ] source
-- [ ] noscript
+- [x] noscript
