@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title>Freaky Detailing</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ebdf3d" />
+    <meta name="description" content="Freaky Detailing, the #1 Auto Detailing service in Bikini Bottom!"/>
+    <meta name="keywords" content="auto detailing, car wash, cleaning" />
+    <meta name="author" content="Kevin Do" />
+    <meta name="language" content="en">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="images/favicon.ico" rel="icon" />
+
+    <style>
+        services-carousel {
+            overflow: auto;
+            white-space: nowrap;
+            display: flex;
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Freaky Detailing</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about.html">About</a>
+                </li>
+                <li>
+                    <a href="/contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="/services.html">Services</a>
+                </li>
+            </ul>    
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h2>The Freakiest Auto Detailing in Town!</h2>
+                <p>
+                    No matter what level of <i>freak</i> you want to bring to your car, I'm gonna <strong>match your freak</strong> with <b>professional</b> detailing services catered specifically to your needs.
+                </p>
+                <button>Book Now!</button>
+            </div>
+            <picture>
+                <source srcset="/images/freakbobcalling.jpeg" media="(orientation: portrait)" />
+                <img src="/images/freakbobblank.jpeg" alt="freak bob heashot" />
+            </picture>
+        </section>
+        <section>
+            <services-carousel>
+                <div>
+                    <img src="/images/burgermobile.webp" alt="example washed car" height="300px" />
+                    <div>
+                        <h2>Exterior Package</h2>
+                        <p>
+                            Our exterior package includes a full wash and wax of your vehicle. We'll make sure your car is shining like new and looking <em>delicious</em> like this burgermobile!
+                        </p>
+                        <aside>
+                            <p>
+                                Starting Price: $100
+                                <br>
+                                Add-Ons include: Clay Bar and Iron Decontamination, Paint Correction, Ceramic Coating
+                            </p>
+                        </aside>
+                    </div>
+                </div>
+                <div>
+                    <img src="/images/boatmobile.webp" alt="example interior car" height="300px" />
+                    <div>
+                        <h2>Interior Package</h2>
+                        <p>
+                            Our interior package includes a full vacuum and shampoo of your vehicle.
+                        </p>
+                        <aside>
+                            <p>
+                                Starting Price: $100
+                                <br>
+                                Add-Ons include: Leather Conditioning, Odor Removal, Stain Removal
+                            </p>
+                        </aside>
+                    </div>
+                </div>
+                <div>
+                    <img src="/images/tankmobile.webp" alt="example full detail car" height="300px" />
+                    <div>
+                        <h2>Full Detail Package</h2>
+                        <p>
+                            Our full detail package includes both the exterior and interior packages. We'll make sure your car is standings out from the rest of the crowd like a star in the night sky!
+                        </p>
+                        <aside>
+                            <p>
+                                Starting Price: $200
+                            </p>
+                        </aside>
+                    </div>
+                </div>
+            </services-carousel>
+        </section>
+        <section>
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

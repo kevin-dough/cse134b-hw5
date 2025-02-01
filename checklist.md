@@ -1,43 +1,43 @@
-- [ ] html
-- [ ] head
-- [ ] title
-- [ ] meta
-- [ ] link
+- [x] html
+- [x] head
+- [x] title
+- [x] meta
+- [x] link
 - [ ] script*
-- [ ] style*
-- [ ] body
-- [ ] main
-- [ ] h1
-- [ ] h2
+- [x] style*
+- [x] body
+- [x] main
+- [x] h1
+- [x] h2
 - [ ] h3
-- [ ] p
-- [ ] section
-- [ ] header
-- [ ] footer
-- [ ] aside
-- [ ] nav
-- [ ] div
+- [x] p
+- [x] section
+- [x] header
+- [x] footer
+- [x] aside
+- [x] nav
+- [x] div
 - [ ] span
-- [ ] br
-- [ ] b
-- [ ] i
-- [ ] strong
+- [x] br
+- [x] b
+- [x] i
+- [x] strong
 - [ ] em
 - [ ] code
 - [ ] pre
 - [ ] hr
-- [ ] a
-- [ ] img
-- [ ] picture
+- [x] a
+- [x] img
+- [x] picture
 - [ ] iframe
 - [ ] audio
 - [ ] video
 - [ ] canvas*
 - [ ] svg*
 - [ ] ul
-- [ ] ol
+- [x] ol
 - [ ] optgroup
-- [ ] li
+- [x] li
 - [ ] form
 - [ ] label
 - [ ] fieldset
@@ -49,7 +49,7 @@
 - [ ] option
 - [ ] details
 - [ ] summary
-- [ ] button*
+- [x] button*
 - [ ] template*
 - [ ] table
 - [ ] tr
