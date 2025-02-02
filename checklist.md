@@ -3,7 +3,7 @@
 - [x] title
 - [x] meta
 - [x] link
-- [ ] script*
+- [x] script*
 - [x] style*
 - [x] body
 - [x] main
@@ -24,13 +24,13 @@
 - [x] strong
 - [x] em
 - [ ] code
-- [ ] pre
+- [x] pre
 - [x] hr
 - [x] a
 - [x] img
 - [x] picture
 - [ ] iframe
-- [ ] audio
+- [x] audio
 - [ ] video
 - [ ] canvas*
 - [ ] svg*
@@ -38,11 +38,11 @@
 - [x] ol
 - [ ] optgroup
 - [x] li
-- [ ] form
-- [ ] label
+- [x] form
+- [x] label
 - [ ] fieldset
 - [ ] legend
-- [ ] input
+- [x] input
 - [ ] textarea
 - [ ] datalist
 - [ ] select
@@ -64,15 +64,15 @@
 - [ ] cite
 - [ ] ins
 - [ ] del
-- [ ] search
+- [x] search
 - [ ] dialog
-- [ ] address
+- [x] address
 - [ ] hgroup
 - [ ] dd
 - [ ] dt
 - [ ] dl
 - [ ] abbr
-- [ ] dfn
-- [ ] kbd
-- [ ] source
+- [x] dfn
+- [x] kbd
+- [x] source
 - [x] noscript

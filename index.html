@@ -10,7 +10,7 @@
     <meta name="author" content="Kevin Do" />
     <meta name="language" content="en">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link href="images/favicon.ico" rel="icon" />
 
     <style>
@@ -75,7 +75,7 @@
                             <ol>
                                 <li>Hand Wash w/ Microfiber Mitt and Snow Foam Soap</li>
                                 <li>Wheel and Tire Cleaning</li>
-                                <li>Tire Dressing</li>
+                                <li><dfn>Tire Dressing</dfn></li>
                                 <li>Window Cleaning</li>
                                 <li>Light spray wax for paint protection</li>
                             </ol>
@@ -160,8 +160,19 @@
         </section>
     </main>
     <footer>
-
+        <p>&copy; 2025 Freaky Detailing</p>
     </footer>
+    <freaky-message></freaky-message>
+
+    <script>
+        class FreakyMessage extends HTMLElement {
+            constructor() {
+                super();
+                console.log("What's good fellow Freak! Can somebody match my freak? 🤪");
+            }
+        }
+        customElements.define("freaky-message", FreakyMessage);
+    </script>
 </body>
 
 </html>
