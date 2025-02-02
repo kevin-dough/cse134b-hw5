@@ -23,55 +23,55 @@
 - [x] i
 - [x] strong
 - [x] em
-- [ ] code
+- [x] code
 - [x] pre
 - [x] hr
 - [x] a
 - [x] img
 - [x] picture
-- [ ] iframe
+- [x] iframe
 - [x] audio
-- [ ] video
-- [ ] canvas*
-- [ ] svg*
+- [x] video
+- [x] canvas*
+- [x] svg*
 - [x] ul
 - [x] ol
-- [ ] optgroup
+- [x] optgroup
 - [x] li
 - [x] form
 - [x] label
-- [ ] fieldset
-- [ ] legend
+- [x] fieldset
+- [x] legend
 - [x] input
-- [ ] textarea
-- [ ] datalist
-- [ ] select
-- [ ] option
+- [x] textarea
+- [x] datalist
+- [x] select
+- [x] option
 - [x] details
 - [x] summary
 - [x] button*
-- [ ] template*
-- [ ] table
-- [ ] tr
-- [ ] td
-- [ ] th
-- [ ] caption
-- [ ] col
-- [ ] colgroup
+- [x] template*
+- [x] table
+- [x] tr
+- [x] td
+- [x] th
+- [x] caption
+- [x] col
+- [x] colgroup
 - [x] figure
 - [x] figcaption
 - [x] blockquote
-- [ ] cite
-- [ ] ins
-- [ ] del
+- [x] cite
+- [x] ins
+- [x] del
 - [x] search
-- [ ] dialog
+- [x] dialog
 - [x] address
-- [ ] hgroup
-- [ ] dd
-- [ ] dt
-- [ ] dl
-- [ ] abbr
+- [x] hgroup
+- [x] dd
+- [x] dt
+- [x] dl
+- [x] abbr
 - [x] dfn
 - [x] kbd
 - [x] source
