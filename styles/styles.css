@@ -1,5 +1,5 @@
 @import "vars.css";
-* { border: 1px solid red !important; }
+/* * { border: 1px solid red !important; } */
 
 @font-face { font-family: Snow Mountain; src: url('Snow Mountain.ttf'); } 
 
