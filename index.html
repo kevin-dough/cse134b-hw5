@@ -23,12 +23,12 @@
             white-space: nowrap;
             display: flex;
             gap: 1rem;
-            background-color: var(--alternate-background-color);
+            background-color: var(--alternate-background-color, rgb(240, 240, 240));
             padding: 1rem 2rem;
         }
 
         services-carousel > div {
-            background-color: var(--background-color);
+            background-color: var(--background-color, #fff);
             max-width: 400px;
             padding: 1rem;
             display: flex;
@@ -56,7 +56,7 @@
             <img src="images/logo.png" alt="Summit Detailing logo" height="30px">
             <h1>SUMMIT DETAILING</h1>
         </div>
-        <nav>
+        <nav id="navMenu">
             <ul id="navList">
                 <li>
                     <a href="/">HOME</a>
@@ -72,33 +72,28 @@
                 </li>
             </ul>    
         </nav>
+        <button id="hamburger">
+            ☰
+        </button>
         <noscript>Turn your Javascript on!</noscript>
     </header>
     <main>
-        <section style="display: flex; gap: 1rem; padding: 3rem; justify-content: space-around">
-            <div style="width: 100%;">
-                <h2>The <span style="color:var(--primary-color)">PEAK</span> of Mobile Auto Detailing Services in San Diego, CA!</h2>
+        <section id="bannerSection" style="display: flex; align-items: center; justify-content: space-between; gap: 3rem; text-align: center; padding: 3rem">
+            <div>
+                <h2>The <span style="color:var(--primary-color, #00C0E9)">PEAK</span> of Mobile Auto Detailing Services in San Diego, CA!</h2>
                 <hr>
                 <p style="font-size:1.2em">
-                    Even though there's no snow in San Diego, we'll make sure your car is shining like a fresh snowfall! We offer 
+                    Even though there's no snow in San Diego, we'll make sure your car is shining like a <span style="font-family: Snow Mountain; color:#00C0E9">fresh</span> snowfall! We offer 
                     exterior and interior cleaning, paint correction, ceramic coating, and more! Interested?
                 </p>
                 <div style="display:flex; justify-content: center;">
                     <button>BOOK NOW!</button>
                 </div>
             </div>
-            <div style="display:flex; flex-direction: column; align-items: center">
-                <img src="/images/logo-banner.png" alt="Summit Detailing logo banner" height="300px">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img id="bannerImg" src="/images/logo-banner.png" alt="Summit Detailing logo banner" height="275px">
                 <figcaption>Summit Detailing was created by a poor college student after seeing his friend's dirty car. He just couldn't take the eyesore anymore and decideded to do something about it. Summit Detailing offers affordable and excellent services for your car!</figcaption>
             </div>
-            <!-- <picture>
-                <source srcset="/images/freakbobcalling.jpeg" media="(orientation: portrait)">
-                <img src="/images/freakbobblank.jpeg" alt="freak bob heashot">
-            </picture>
-                <p>sound to play when looking at my profile picture:</p>
-                <audio controls>
-                    <source src="media/rizz.mp3" type="audio/ogg">
-                </audio> -->
         </section>
         <section>
             <services-carousel>
@@ -199,7 +194,7 @@
         </section>
         <section style="padding: 2em">
             <h3 style="margin: 0">Testimonials</h3>
-            <div style="display: flex; flex-direction: row; flex-wrap: wrap">
+            <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
                 <blockquote>
                     <h4>Spongebob Squarepant's Cousin</h4>
                     <p>

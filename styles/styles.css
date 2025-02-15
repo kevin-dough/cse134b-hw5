@@ -1,10 +1,14 @@
 @import "vars.css";
+* { border: 1px solid red !important; }
+
+@font-face { font-family: Snow Mountain; src: url('Snow Mountain.ttf'); } 
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--background-color, #fff);
     color: var(--main-text-color);
     margin: 0;
     font-family: 'Trebuchet MS', sans-serif;
+    width: 100%;
 }
 
 header {
@@ -12,18 +16,57 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--alternate-background-color);
+    background-color: var(--alternate-background-color, rgb(240, 240, 240));
+}
+
+section {
+    overflow: hidden;
 }
 
 header h1 {
     letter-spacing: 3px;
-    font-size: 2.2em;
+    font-size: 2em;
+    width: 100%;
+}
+
+#hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 0;
+}
+
+@media (max-width: 855px) {
+    #navMenu {
+        display: none;
+    }
+    #hamburger {
+        display: inline;
+    }
+    header h1 {
+        font-size: 1.3em;
+    }
+    #bannerImg {
+        height: 150px;
+    }
+    #bannerSection {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 970px) {
+    #bannerImg {
+        height: 200px;
+    }
 }
 
 nav {
     display: flex;
     align-items: center;
-    width: 40%;
+    width: 23em;
 }
 
 #navList {
@@ -33,18 +76,19 @@ nav {
     gap: 1em;
     list-style-type: none;
     width: 100%;
+    padding: 0;
 }
 
 #navList li a {
     text-decoration: none;
-    color: var(--main-text-color);
+    color: var(--main-text-color, black);
     font-weight: bold;
 }
 
 
 footer {
     padding: 0.5em;
-    background-color: var(--alternate-background-color);
+    background-color: var(--alternate-background-color, rgb(240, 240, 240));
     display: flex;
     justify-content: center;
 }
@@ -62,7 +106,7 @@ h3 {
 }
 
 button {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color, #00C0E9);
     color: white;
     border: none;
     padding: 0.5em;
@@ -72,16 +116,17 @@ button {
 }
 
 hr {
-    border: 2px solid var(--alternate-background-color);
+    border: 2px solid var(--alternate-background-color, rgb(240, 240, 240));
     width: 200px;
     border-radius: 5px;
 }
 
 figcaption {
-    color: var(--alt-text-color);
+    color: var(--alt-text-color, #bfbfbf);
     max-width: 80%;
 }
 
 blockquote {
-    max-width: 25%;
+    width: 20em;
+    margin: 1em;
 }
