@@ -122,8 +122,8 @@ h3 {
 }
 
 button {
-    background-color: var(--primary-color, #00C0E9);
-    color: white;
+    background-color: color(display-p3 0 0.7529 0.9137);
+    color: color(white);
     border: none;
     padding: 0.5em;
     font-size: 1.2em;
@@ -141,6 +141,7 @@ button {
 
 .bookButton:hover {
     animation: wiggle 1.5s ease-in-out infinite;
+    background-color: color-mix(in sRGB, orange 40%, pink 30%);
 }
 
 hr {
