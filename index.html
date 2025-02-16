@@ -47,6 +47,11 @@
             height: 300px;
             display: inline-block;
             object-fit: cover;
+            transition: transform ease-in-out 0.2s;
+        }
+
+        .carousel-image:active {
+            transform: scale(1.1);
         }
 
     </style>
@@ -54,13 +59,13 @@
 <body>
     <header>
         <div style="display: flex;align-items: center; gap: 1rem;">
-            <img src="images/logo.png" alt="Summit Detailing logo" height="30px">
+            <a aria-label="go to home screen" href="/"><img src="images/logo.png" alt="Summit Detailing logo" height="30px" draggable="false"></a>
             <h1>SUMMIT DETAILING</h1>
         </div>
         <nav id="navMenu">
             <ul id="navList">
                 <li>
-                    <a href="/">HOME</a>
+                    <a href="/">HOME</a> <!-- set links to active with javascript -->
                 </li>
                 <li>
                     <a href="/about.html">ABOUT</a>
@@ -88,7 +93,7 @@
                     exterior and interior cleaning, paint correction, ceramic coating, and more! Interested?
                 </p>
                 <div style="display:flex; justify-content: center;">
-                    <button>BOOK NOW!</button>
+                    <button class="bookButton">BOOK NOW!</button>
                 </div>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
@@ -99,7 +104,7 @@
         <section>
             <services-carousel>
                 <div>
-                    <img class="carousel-image" src="/images/supra.jpg" alt="example washed car">
+                    <img class="carousel-image" src="/images/supra.jpg" alt="example washed car" draggable="false">
                     <div class="carousel-card">
                         <h3>Exterior Package</h3>
                         <p>
@@ -125,7 +130,7 @@
                     </div>
                 </div>
                 <div>
-                    <img class="carousel-image" src="/images/truckdog.jpg" alt="example interior car">
+                    <img class="carousel-image" src="/images/truckdog.jpg" alt="example interior car" draggable="false">
                     <div class="carousel-card">
                         <h3>Interior Package</h3>
                         <p>
@@ -150,7 +155,7 @@
                     </div>
                 </div>
                 <div class="carousel-card">
-                    <img class="carousel-image" src="/images/corvette.jpg" alt="example full detail car">
+                    <img class="carousel-image" src="/images/corvette.jpg" alt="example full detail car" draggable="false">
                     <div>
                         <h3>Full Detail Package</h3>
                         <p>
@@ -164,7 +169,7 @@
                     </div>
                 </div>
                 <div class="carousel-card">
-                    <img class="carousel-image" src="/images/hatches.jpg" alt="example ceramic coating">
+                    <img class="carousel-image" src="/images/hatches.jpg" alt="example ceramic coating" draggable="false">
                     <div>
                         <h3>Ceramic Coating</h3>
                         <p>
@@ -178,7 +183,7 @@
                     </div>
                 </div>
                 <div class="carousel-card">
-                    <img class="carousel-image" src="/images/bananatruck.jpg" alt="example paint correction">
+                    <img class="carousel-image" src="/images/bananatruck.jpg" alt="example paint correction" draggable="false">
                     <div>
                         <h3>Paint Correction</h3>
                         <p>
