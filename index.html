@@ -27,6 +27,7 @@
             padding: 1rem 2rem;
         }
 
+        /* using nested */
         services-carousel > div {
                 background-color: var(--background-color, #fff);
                 max-width: 400px;
@@ -36,14 +37,14 @@
                 flex-direction: column;
                 align-items: center;
 
-                div:has(> h3) {
+                & div:has(> h3) {
                     padding: 0;
                     text-wrap: wrap;
                     word-wrap: break-word;
                     align-items: normal;
                 }
 
-                img {
+                & img {
                     width: 100%;
                     height: 300px;
                     display: inline-block;
@@ -51,12 +52,12 @@
                     transition: transform ease-in-out 0.2s;
                 }
 
-                img:active {
+                & img:active {
                     transform: scale(1.1);
                 }
             }
 
-            @scope (blockquote) {
+            blockquote:scope {
                     p {
                         background-color: var(--alternate-background-color, rgb(240, 240, 240));
                         padding: 1rem;
