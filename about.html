@@ -17,14 +17,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/images/favicon/site.webmanifest">
 
-    <style>
-        services-carousel {
-            overflow: auto;
-            white-space: nowrap;
-            display: flex;
-            gap: 1rem;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -32,7 +24,7 @@
             <img src="images/logo.png" alt="Summit Detailing logo" height="30px">
             <h1>SUMMIT DETAILING</h1>
         </div>
-        <nav>
+        <nav id="navMenu">
             <ul id="navList">
                 <li>
                     <a href="/">HOME</a>
@@ -48,12 +40,15 @@
                 </li>
             </ul>    
         </nav>
+        <button id="hamburger">
+            ☰
+        </button>
         <noscript>Turn your Javascript on!</noscript>
     </header>
     <main>
         <section style="padding: 0 2rem">
             <h2>About Summit Detailing</h2>
-            <div id="aboutDiv" style="display: flex; gap: 3rem;">
+            <div id="aboutDiv" style="display: flex; gap: 3rem; justify-content: center">
                 <p style="font-size: 1.2em; max-width: 50rem">
                     Summit Detailing was started by Kevin Do, a poor college boy from the humble and small neighborhood of 4S Ranch in San Diego, California. 
                     His dad had purchased a pressure washer to clean the ground and windows but after seeing detailing videos on YouTube, Kevin saw the opportunity 
