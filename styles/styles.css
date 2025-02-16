@@ -2,8 +2,6 @@
 @import "animations.css";
 /* * { border: 1px solid red !important; } */
 
-@font-face { font-family: Snow Mountain; src: url('Snow Mountain.ttf'); } 
-
 body {
     background-color: var(--background-color, #fff);
     color: var(--main-text-color);
