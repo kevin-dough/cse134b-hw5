@@ -28,31 +28,41 @@
         }
 
         services-carousel > div {
-            background-color: var(--background-color, #fff);
-            max-width: 400px;
-            padding: 1rem;
-            display: flex;
-            flex-shrink: 0;
-            flex-direction: column;
-            align-items: center;
-        }
+                background-color: var(--background-color, #fff);
+                max-width: 400px;
+                padding: 1rem;
+                display: flex;
+                flex-shrink: 0;
+                flex-direction: column;
+                align-items: center;
 
-        div:has(> h3) {
-            text-wrap: wrap;
-            word-wrap: break-word;
-        }
+                div:has(> h3) {
+                    padding: 0;
+                    text-wrap: wrap;
+                    word-wrap: break-word;
+                    align-items: normal;
+                }
 
-        .carousel-image {
-            width: 100%;
-            height: 300px;
-            display: inline-block;
-            object-fit: cover;
-            transition: transform ease-in-out 0.2s;
-        }
+                img {
+                    width: 100%;
+                    height: 300px;
+                    display: inline-block;
+                    object-fit: cover;
+                    transition: transform ease-in-out 0.2s;
+                }
 
-        .carousel-image:active {
-            transform: scale(1.1);
-        }
+                img:active {
+                    transform: scale(1.1);
+                }
+            }
+
+            @scope (blockquote) {
+                    p {
+                        background-color: var(--alternate-background-color, rgb(240, 240, 240));
+                        padding: 1rem;
+                    }
+                }
+            
 
     </style>
 </head>
