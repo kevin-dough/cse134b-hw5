@@ -62,7 +62,7 @@
 <body>
     <header>
         <div style="display: flex;align-items: center; gap: 1rem;">
-            <a aria-label="go to home screen" href="/"><img src="images/logo.png" alt="Summit Detailing logo" height="30px" draggable="false"></a>
+            <a aria-label="go to home screen" href="/"><img src="images/logo.png" alt="Summit Detailing logo" height="30" draggable="false"></a>
             <h1>SUMMIT DETAILING</h1>
         </div>
         <nav id="navMenu">
@@ -88,10 +88,8 @@
     </header>
     <main>
         <section style="padding: 0 2rem">
-            <hgroup>
-                <h2>Contact Us</h2>
-                <h3>Want to book an appointment? Contact us below!</h3>
-            </hgroup>
+            <h2>Contact Us</h2>
+            <h3>Want to book an appointment? Contact us below!</h3>
             <template>
                 <p>Thanks for contacting us! We will get back to you <abbr>ASAP</abbr></p>
             </template>
@@ -102,8 +100,8 @@
                   <button>OK</button>
                 </form>
               </dialog> -->
-            <form action="" method="post">
-                <legend style="font-size: 2em; text-align: center;">Contact Form</legend>
+            <form action="/submit" method="post">
+                <p style="font-size: 2em; text-align: center; margin: 0">Contact Form</p>
                 <hr style="border-color: var(--secondary-color, #FF6F61); width: 50%">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -137,54 +135,54 @@
                     <dl>
                         <dt>Interior Add-Ons</dt>
                             <dd>
-                                <input type="checkbox" id="stain-removal" name="stain-removal" />
+                                <input type="checkbox" id="stain-removal" name="stain-removal" >
                                 <label for="stain-removal">Stain Removal</label>
                             </dd>
                             <dd>
-                                <input type="checkbox" id="pet-hair-removal" name="pet-hair-removal" />
+                                <input type="checkbox" id="pet-hair-removal" name="pet-hair-removal" >
                                 <label for="pet-hair-removal">Pet Hair Removal</label>
                             </dd>
                         <dt>Exterior Add-Ons:</dt>
                             <dd>
-                                <input type="checkbox" id="claybar" name="claybar" />
+                                <input type="checkbox" id="claybar" name="claybar" >
                                 <label for="claybar">Clay Bar Treatment</label>
                             </dd>
                             <dd>
-                                <input type="checkbox" id="paint-correction" name="paint-correction" />
+                                <input type="checkbox" id="paint-correction" name="paint-correction" >
                                 <label for="paint-correction">Paint Correction</label>
                             </dd>
                             <dd>
-                                <input type="checkbox" id="waxing" name="waxing" />
+                                <input type="checkbox" id="waxing" name="waxing" >
                                 <label for="waxing">Waxing</label>
                             </dd>
                             <dd>
-                                <input type="checkbox" id="ceramic-coating" name="ceramic-coating" />
+                                <input type="checkbox" id="ceramic-coating" name="ceramic-coating" >
                                 <label for="ceramic-coating">Ceramic Coating</label>
                             </dd>
                         <dt>Other Add-Ons:</dt>
                             <dd>
-                                <input type="checkbox" id="headlight-restoration" name="headlight-restoration" />
+                                <input type="checkbox" id="headlight-restoration" name="headlight-restoration" >
                                 <label for="headlight-restoration">Headlight Restoration</label>
                             </dd>
                             <dd>
-                                <input type="checkbox" id="engine-bay-detailing" name="engine-bay-detailing" />
+                                <input type="checkbox" id="engine-bay-detailing" name="engine-bay-detailing" >
                                 <label for="engine-bay-detailing">Engine Bay Detailing</label>
                             </dd>
                     </dl>
                 </fieldset>
                 <label for="vehicle-size">Choose your vehicle size (make and model if you don't know):</label>
-                <input list="vehicle-sizes" id="vehicle-size" name="vehicle-size" />
-                <datalist id="vehicle-sizes" name="vehicle-size">
+                <input list="vehicle-sizes" id="vehicle-size" name="vehicle-size" >
+                <datalist id="vehicle-sizes">
                     <option value="Small">(+$0) Honda Civic, Toyota Corolla, Tesla Model 3, etc. </option>
                     <option value="Medium">(+$15) Toyota RAV4, Honda CR-V, Tesla Model Y, etc.</option>
                     <option value="Large">(+$30) Ford Explorer, Honda Odyssey, Chevy Silverado, etc.</option>
                     <option value="Extra Large">(+$45) Cadillac Escalade, Chevy Suburban, Ford F-250, etc.</option>
                 </datalist>
 
-                <label for="comments" id="comments">Comments:</label>
+                <label for="comments">Comments:</label>
                 <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter any comments here."></textarea>
 
-                <input type="submit" value="SUBMIT"/>
+                <input type="submit" value="SUBMIT">
                 
             </form>
         </section>
