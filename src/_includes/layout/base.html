@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "basehead.html" %}
+
+    {% block head %}{% endblock %}
+
+</head>
+<body>
+    <header>
+        <div style="display: flex;align-items: center; gap: 1rem;">
+            <a aria-label="go to home screen" href="/"><img src="/images/logo.png" alt="Summit Detailing logo" height="30" draggable="false"></a>
+            <h1>SUMMIT DETAILING</h1>
+        </div>
+        <nav id="navMenu">
+            <ul id="navList">
+                <li>
+                    <a href="/">HOME</a> <!-- set links to active with javascript -->
+                </li>
+                <li>
+                    <a href="/about">ABOUT</a>
+                </li>
+                <li>
+                    <a href="/contact">CONTACT</a>
+                </li>
+                <li>
+                    <a href="/services">SERVICES</a>
+                </li>
+            </ul>    
+        </nav>
+        <button id="hamburger">
+            ☰
+        </button>
+        <noscript>Turn your Javascript on!</noscript>
+    </header>
+
+    {{ content | safe }}
+    
+    <footer>
+        <p>&copy; 2025 Summit Detailing</p>
+    </footer>
+    <freaky-message></freaky-message>
+
+    <script>
+        class FreakyMessage extends HTMLElement {
+            constructor() {
+                super();
+                console.log("What's good fellow Freak! Can somebody match my freak? 🤪");
+            }
+        }
+        customElements.define("freaky-message", FreakyMessage);
+    </script>
+</body>
+
+</html>

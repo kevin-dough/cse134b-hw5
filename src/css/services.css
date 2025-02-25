@@ -1,0 +1,27 @@
+table {
+    margin: 2rem;
+    background-color: var(--alternate-background-color, rgb(240, 240, 240));
+}
+
+caption {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+section > p {
+    max-width: 50rem;
+}
+
+h3 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(219, 219, 219);
+}

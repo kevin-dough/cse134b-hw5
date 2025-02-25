@@ -1,0 +1,105 @@
+---
+layout: layout/contact.html
+---
+
+<main>
+    <section style="padding: 0 2rem">
+        <h2>Contact Us</h2>
+        <h3>Want to book an appointment? Contact us below!</h3>
+        <template>
+            <p>Thanks for contacting us! We will get back to you <abbr>ASAP</abbr></p>
+        </template>
+        <!-- <dialog open>
+            <p>Get 15% off when you book recurring appointments!</p>
+            <p>Write <span>RECURRING</span> in the comments to let us know!</p>
+            <form method="dialog">
+              <button>OK</button>
+            </form>
+          </dialog> -->
+        <form action="/submit" method="post">
+            <p style="font-size: 2em; text-align: center; margin: 0">Contact Form</p>
+            <hr style="border-color: var(--secondary-color, #FF6F61); width: 50%">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="package-select">Choose a package:</label>
+            <select id="package-select" name="package-select">
+                <optgroup label="Interior Detailing">
+                    <option>Basic Interior Package ($150)</option>
+                    <option>Premium Interior Package ($180)</option>
+                    <option>Premium Plus Interior Package ($195)</option>
+                    </optgroup>
+                    <optgroup label="Exterior Detailing">
+                    <option>Basic Exterior Package ($100)</option>
+                    <option>Premium Exterior Package ($140)</option>
+                    <option>Premium Plus Exterior Package ($160)</option>
+                    </optgroup>
+                    <optgroup label="Full Detailing">
+                        <option>Basic Full Detail Package ($240)</option>
+                        <option>Premium Full Detail Package ($290)</option>
+                        <option>Premium Plus Full Detail Package ($330)</option>
+                    </optgroup>
+            </select>
+            <fieldset style="border: 1px solid black; border-radius: 0.5em; margin: 0.4em;">
+                <legend style="font-size:1.2em">Add-Ons</legend>
+                <dl>
+                    <dt>Interior Add-Ons</dt>
+                        <dd>
+                            <input type="checkbox" id="stain-removal" name="stain-removal" >
+                            <label for="stain-removal">Stain Removal</label>
+                        </dd>
+                        <dd>
+                            <input type="checkbox" id="pet-hair-removal" name="pet-hair-removal" >
+                            <label for="pet-hair-removal">Pet Hair Removal</label>
+                        </dd>
+                    <dt>Exterior Add-Ons:</dt>
+                        <dd>
+                            <input type="checkbox" id="claybar" name="claybar" >
+                            <label for="claybar">Clay Bar Treatment</label>
+                        </dd>
+                        <dd>
+                            <input type="checkbox" id="paint-correction" name="paint-correction" >
+                            <label for="paint-correction">Paint Correction</label>
+                        </dd>
+                        <dd>
+                            <input type="checkbox" id="waxing" name="waxing" >
+                            <label for="waxing">Waxing</label>
+                        </dd>
+                        <dd>
+                            <input type="checkbox" id="ceramic-coating" name="ceramic-coating" >
+                            <label for="ceramic-coating">Ceramic Coating</label>
+                        </dd>
+                    <dt>Other Add-Ons:</dt>
+                        <dd>
+                            <input type="checkbox" id="headlight-restoration" name="headlight-restoration" >
+                            <label for="headlight-restoration">Headlight Restoration</label>
+                        </dd>
+                        <dd>
+                            <input type="checkbox" id="engine-bay-detailing" name="engine-bay-detailing" >
+                            <label for="engine-bay-detailing">Engine Bay Detailing</label>
+                        </dd>
+                </dl>
+            </fieldset>
+            <label for="vehicle-size">Choose your vehicle size (make and model if you don't know):</label>
+            <input list="vehicle-sizes" id="vehicle-size" name="vehicle-size" >
+            <datalist id="vehicle-sizes">
+                <option value="Small">(+$0) Honda Civic, Toyota Corolla, Tesla Model 3, etc. </option>
+                <option value="Medium">(+$15) Toyota RAV4, Honda CR-V, Tesla Model Y, etc.</option>
+                <option value="Large">(+$30) Ford Explorer, Honda Odyssey, Chevy Silverado, etc.</option>
+                <option value="Extra Large">(+$45) Cadillac Escalade, Chevy Suburban, Ford F-250, etc.</option>
+            </datalist>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter any comments here."></textarea>
+
+            <input type="submit" value="SUBMIT">
+            
+        </form>
+    </section>
+</main>
