@@ -27,7 +27,7 @@
                     <a href="/services">SERVICES</a>
                 </li>
                 <li>
-                    <button id="themeToggle">
+                    <button class="themeToggle">
                         🌚
                     </button>
                 </li>
@@ -38,6 +38,28 @@
         </button>
         <noscript>Turn your Javascript on!</noscript>
     </header>
+    <nav id="hamburgerNavMenu">
+        <ul id="hamburgerNavList">
+            <li>
+                <a href="/">HOME</a>
+            </li>
+            <li>
+                <a href="/about">ABOUT</a>
+            </li>
+            <li>
+                <a href="/contact">CONTACT</a>
+            </li>
+            <li>
+                <a href="/services">SERVICES</a>
+            </li>
+            <li>
+                <button class="themeToggle">
+                    🌚
+                </button>
+            </li>
+        </ul>    
+    </nav>
+    
 
     {{ content | safe }}
     
@@ -45,6 +67,22 @@
         <p>&copy; 2025 Summit Detailing</p>
     </footer>
     <freaky-message></freaky-message>
+
+    <script>
+        document.getElementById("hamburger").addEventListener("click", function() {
+            let menu = document.getElementById("hamburgerNavMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+            themeToggles.forEach(themeToggler => {
+                themeToggler.textContent = theme === 'light' ? '🌚' : '🌞';
+            });
+        });
+
+        window.addEventListener("resize", function() {
+            if (window.innerWidth > 855) {
+                document.getElementById("hamburgerNavMenu").style.display = "none";
+            }
+        });
+    </script>
 
     <script>
         class FreakyMessage extends HTMLElement {
@@ -58,12 +96,25 @@
 
     <script>
         let theme = localStorage.getItem('theme');
-        const themeToggler = document.getElementById("themeToggle");
+        const themeToggles = document.querySelectorAll(".themeToggle");
+        console.log(themeToggles);
         const body = document.querySelector('body');
         
-
+        
         document.addEventListener("DOMContentLoaded", (event) => {
-            themeToggler.textContent = theme === 'light' ? '🌚' : '🌞';
+
+            let url = window.location.pathname;
+            let navLinks = document.querySelectorAll("#navList a, #hamburgerNavList a");
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === url) {
+                    link.classList.add('active');
+                }
+            });
+
+            document.getElementById("hamburgerNavMenu").style.display = "none";
+            themeToggles.forEach(themeToggler => {
+                themeToggler.textContent = theme === 'light' ? '🌚' : '🌞';
+            });
             if (theme === 'dark') {
                 console.log("dark mode!!")
                 body.classList.add('dark');
@@ -71,19 +122,20 @@
                 body.classList.remove('dark');
             }
         });
-
-        themeToggler.addEventListener("click", function() {
-            if (theme === 'light') {
-                body.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                themeToggler.textContent = '🌞';
-                theme = 'dark';
-            } else {
-                body.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-                themeToggler.textContent = '🌚';
-                theme = 'light';
-            }
+        themeToggles.forEach(themeToggler => {
+            themeToggler.addEventListener("click", function() {
+                if (theme === 'light') {
+                    body.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeToggler.textContent = '🌞';
+                    theme = 'dark';
+                } else {
+                    body.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    themeToggler.textContent = '🌚';
+                    theme = 'light';
+                }
+            });
         });
 
     </script>
