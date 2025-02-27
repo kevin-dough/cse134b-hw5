@@ -26,6 +26,11 @@
                 <li>
                     <a href="/services">SERVICES</a>
                 </li>
+                <li>
+                    <button id="themeToggle">
+                        🌚
+                    </button>
+                </li>
             </ul>    
         </nav>
         <button id="hamburger">
@@ -49,6 +54,38 @@
             }
         }
         customElements.define("freaky-message", FreakyMessage);
+    </script>
+
+    <script>
+        let theme = localStorage.getItem('theme');
+        const themeToggler = document.getElementById("themeToggle");
+        const body = document.querySelector('body');
+        
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+            themeToggler.textContent = theme === 'light' ? '🌚' : '🌞';
+            if (theme === 'dark') {
+                console.log("dark mode!!")
+                body.classList.add('dark');
+            } else {
+                body.classList.remove('dark');
+            }
+        });
+
+        themeToggler.addEventListener("click", function() {
+            if (theme === 'light') {
+                body.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggler.textContent = '🌞';
+                theme = 'dark';
+            } else {
+                body.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeToggler.textContent = '🌚';
+                theme = 'light';
+            }
+        });
+
     </script>
 </body>
 

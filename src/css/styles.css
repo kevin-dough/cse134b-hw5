@@ -13,6 +13,16 @@ body {
     flex-direction: column;
 }
 
+body.dark {
+    --background-color: #333;
+    --alternate-background-color: #555;
+    --primary-color: #00C0E9;
+    --secondary-color: #FF6F61;
+    --main-text-color: #fff;
+    --alt-text-color: #bfbfbf;
+    --alt-row-color: #666;
+}
+
 header {
     padding: 0 2em;
     display: flex;
@@ -79,6 +89,11 @@ nav {
     list-style-type: none;
     width: 100%;
     padding: 0;
+}
+
+#navList li {
+    display: flex;
+    align-items: center;
 }
 
 #navList li a {
@@ -156,4 +171,10 @@ figcaption {
 blockquote {
     width: 20em;
     margin: 1em;
+}
+
+#themeToggle {
+    background-color: transparent;
+    font-size: 2em;
+    padding: 0;
 }

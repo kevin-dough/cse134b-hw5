@@ -17,8 +17,7 @@ layout: layout/contact.html
             </form>
           </dialog> -->
         <form action="https://httpbin.org/post" method="post">
-            <input id="formErrorInput" type="hidden" name="form_errors">
-            <input id="botInput" type="hidden" name="possible_bot" value="true">
+            <input type="hidden" name="possible_bot" value="true">
             <p style="font-size: 2em; text-align: center; margin: 0">Contact Form</p>
             <hr style="border-color: var(--secondary-color, #FF6F61); width: 50%">
             <label for="name">Name:</label>
@@ -32,7 +31,7 @@ layout: layout/contact.html
             <output class="infoMessage" id="emailInfo"></output>
 
             <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
             <output class="errorMessage" id="phoneError"></output>
             <output class="infoMessage" id="phoneInfo"></output>
 
@@ -108,91 +107,10 @@ layout: layout/contact.html
             <output class="infoMessage" id="vehicleSizeInfo"></output>
 
             <label for="comments">Comments:</label>
-            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter any comments here."></textarea>
-            <output class="infoMessage" id="commentsInfo"></output>
-            <output class="errorMessage" id="commentsError"></output>
-            
+            <textarea id="comments" name="comments" rows="4" cols="50" maxlength="200" placeholder="Enter any comments here."></textarea>
 
             <input type="submit" value="SUBMIT">
             
         </form>
     </section>
 </main>
-
-<script>
-    const form_errors = [];
-
-    function showError(errorMessageId, message, input) {
-        const errorMessage = document.getElementById(errorMessageId);
-        errorMessage.textContent = message;
-        errorMessage.style.display = 'block';
-
-        form_errors.push({
-            formField: errorMessageId.replace('Error', ''),
-            userInput: input,
-            timestamp: new Date().toISOString()
-        })
-
-        setTimeout(() => {
-            errorMessage.style.display = 'none';
-        }, 1500);
-        
-    }
-
-    const form = document.querySelector('form');
-    form.addEventListener('submit', function(event) {
-        const formErrorInput = document.getElementById('formErrorInput');
-        formErrorInput.value = JSON.stringify(form_errors);
-    });
-
-    let lastName = '';
-    const nameForm = document.getElementById('name');
-    nameForm.addEventListener('input', function(event) {
-        // console.log(nameForm.validity);
-        botInput.value = 'false';
-        if (nameForm.validity.patternMismatch) {
-            showError('nameError', 'Invalid Input!', event.target.value);
-            nameForm.value = lastName;
-        } else {
-            lastName = nameForm.value;
-        }
-    });
-
-    let lastPhone = '';
-    const phoneForm = document.getElementById('phone');
-    phoneForm.addEventListener('input', function(event) {
-        // console.log(phoneForm.validity);
-        botInput.value = 'false';
-        if (/^[0-9()\s-]*$/.test(phoneForm.value) === false) {
-            showError('phoneError', 'Invalid Input!', event.target.value);
-            phoneForm.value = lastPhone;
-        } else {
-            lastPhone = phoneForm.value;
-        }
-    });
-
-    let lastComments = '';
-    const maxTextAreaCharacters = 200;
-    let currCount = 0;
-    const commentsForm = document.getElementById('comments');
-    const commentsCounter = document.getElementById('commentsInfo');
-    commentsCounter.textContent = maxTextAreaCharacters + " characters remaining.";
-
-    commentsForm.addEventListener('input', function(event) {
-        let diff = maxTextAreaCharacters - commentsForm.value.length;
-        currCount = commentsForm.value.length;
-        commentsCounter.textContent = diff + " characters remaining.";
-        if (diff <= 0) {
-            showError('commentsError', 'Too many characters!');
-            commentsForm.value = lastComments;
-        } else if (diff < 20) {
-            commentsCounter.style.color = 'tomato';
-            commentsCounter.style.fontWeight = 'bold';
-            lastComments = commentsForm.value;
-        } else {
-            commentsCounter.style.color = 'black';
-            commentsCounter.style.fontWeight = 'normal';
-            lastComments = commentsForm.value;
-        }
-    });
-</script>

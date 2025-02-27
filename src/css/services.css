@@ -23,5 +23,5 @@ h3 {
 }
 
 tr:nth-child(even) {
-    background-color: rgb(219, 219, 219);
+    background-color: var(--alt-row-color);
 }

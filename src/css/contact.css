@@ -1,5 +1,5 @@
 form[method="post"] {
-    background-color: var(--alternate-background-color, rgb(240, 240, 240));
+    background-color: var(--alternate-background-color);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,8 @@ input, select {
     border-bottom: 2px solid black;
     outline: none;
     margin-bottom: 0.5em;
+    background-color: var(--alt-row-color);
+    color: var(--main-text-color);
 }
 
 input:focus {
@@ -35,4 +37,35 @@ textarea {
     resize: vertical;
     min-height: 5em;
     margin-bottom: 0.5em;
+    background-color: var(--alt-row-color);
+    color: var(--main-text-color);
+    
+}
+
+textarea::placeholder {
+    color: var(--main-text-color);
+}
+
+input:user-invalid {
+    border-bottom: 2px solid red;
+}
+
+input:valid {
+    border-bottom: 2px solid black;
+}
+
+label:has(+ input[required])::after {
+    content: " *";
+    color: red;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 0.8em;
+}
+
+.infoMessage {
+    font-size: 0.8em;
+    font-style: italic;
+    color: var(--main-text-color);
 }
