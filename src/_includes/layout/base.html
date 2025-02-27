@@ -100,7 +100,7 @@
         console.log(themeToggles);
         const body = document.querySelector('body');
         
-        
+        document.getElementById("hamburgerNavMenu").style.display = "none";
         document.addEventListener("DOMContentLoaded", (event) => {
 
             let url = window.location.pathname;
@@ -114,8 +114,6 @@
                     link.classList.remove('active');
                 }
             });
-
-            document.getElementById("hamburgerNavMenu").style.display = "none";
             themeToggles.forEach(themeToggler => {
                 themeToggler.textContent = theme === 'light' ? '🌚' : '🌞';
             });

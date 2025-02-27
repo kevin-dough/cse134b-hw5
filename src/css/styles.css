@@ -46,7 +46,7 @@ header h1 {
     font-size: 2rem;
     background: none;
     border: none;
-    color: black;
+    color: var(--main-text-color);
     cursor: pointer;
     padding: 0;
 }
