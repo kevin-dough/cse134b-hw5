@@ -135,6 +135,19 @@
         });
 
     </script>
+
+    <script>
+        document.querySelectorAll('#navList li a, #hamburgerNavList li a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.body.querySelector('main').classList.add('fadeOut');
+                document.body.querySelector('footer').classList.add('fadeOut');
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 300);
+            });
+        });
+    </script>
 </body>
 
 </html>
