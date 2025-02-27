@@ -96,12 +96,12 @@
 
     <script>
         const themeToggles = document.querySelectorAll(".themeToggle");
-        console.log(themeToggles);
+        // console.log(themeToggles);
         
         document.addEventListener("DOMContentLoaded", (event) => {
 
             let url = window.location.pathname;
-            console.log(url);
+            // console.log(url);
             let navLinks = document.querySelectorAll("#navList a, #hamburgerNavList a");
             navLinks.forEach(link => {
                 if (url.includes(link.getAttribute('href'))) {
@@ -140,6 +140,7 @@
         document.querySelectorAll('#navList li a, #hamburgerNavList li a').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
+                document.getElementById("hamburgerNavMenu").style.display = "none";
                 document.body.querySelector('main').classList.add('fadeOut');
                 document.body.querySelector('footer').classList.add('fadeOut');
                 setTimeout(() => {

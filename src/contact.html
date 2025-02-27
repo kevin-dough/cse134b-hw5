@@ -96,7 +96,7 @@ layout: layout/contact.html
                         </dd>
                 </dl>
             </fieldset>
-            <label for="vehicle-size">Choose your vehicle size:</label>
+            <label for="vehicle-sizes">Choose your vehicle size:</label>
             <select id="vehicle-sizes">
                 <option value="Small">Small (+$0) Honda Civic, Toyota Corolla, Tesla Model 3, etc. </option>
                 <option value="Medium">Medium (+$15) Toyota RAV4, Honda CR-V, Tesla Model Y, etc.</option>
@@ -190,7 +190,7 @@ layout: layout/contact.html
             commentsCounter.style.fontWeight = 'bold';
             lastComments = commentsForm.value;
         } else {
-            commentsCounter.style.color = window.getComputedStyle(document.body.getPropertyValue('--main-text-color'));
+            commentsCounter.style.color = window.getComputedStyle(document.body).getPropertyValue('--main-text-color');
             commentsCounter.style.fontWeight = 'normal';
             lastComments = commentsForm.value;
         }
