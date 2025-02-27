@@ -124,6 +124,7 @@ header h1 {
     text-decoration: underline;
     text-decoration-color: var(--primary-color, #00C0E9);
     text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
 }
 
 

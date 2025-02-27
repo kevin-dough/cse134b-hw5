@@ -104,10 +104,14 @@
         document.addEventListener("DOMContentLoaded", (event) => {
 
             let url = window.location.pathname;
+            console.log(url);
             let navLinks = document.querySelectorAll("#navList a, #hamburgerNavList a");
             navLinks.forEach(link => {
-                if (link.getAttribute('href') === url) {
+                if (url.includes(link.getAttribute('href'))) {
                     link.classList.add('active');
+                }
+                if (url != "/" && link.getAttribute('href') === '/') {
+                    link.classList.remove('active');
                 }
             });
 
