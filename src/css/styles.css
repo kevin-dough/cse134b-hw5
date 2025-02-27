@@ -13,7 +13,7 @@ body {
     flex-direction: column;
 }
 
-body.dark {
+html.dark {
     --background-color: #333;
     --alternate-background-color: #555;
     --primary-color: #00C0E9;

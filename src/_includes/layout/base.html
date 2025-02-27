@@ -95,11 +95,8 @@
     </script>
 
     <script>
-        let theme = localStorage.getItem('theme');
         const themeToggles = document.querySelectorAll(".themeToggle");
         console.log(themeToggles);
-        const body = document.querySelector('body');
-        
         
         document.addEventListener("DOMContentLoaded", (event) => {
 
@@ -119,22 +116,17 @@
             themeToggles.forEach(themeToggler => {
                 themeToggler.textContent = theme === 'light' ? '🌚' : '🌞';
             });
-            if (theme === 'dark') {
-                console.log("dark mode!!")
-                body.classList.add('dark');
-            } else {
-                body.classList.remove('dark');
-            }
+            
         });
         themeToggles.forEach(themeToggler => {
             themeToggler.addEventListener("click", function() {
                 if (theme === 'light') {
-                    body.classList.add('dark');
+                    document.documentElement.classList.add('dark');
                     localStorage.setItem('theme', 'dark');
                     themeToggler.textContent = '🌞';
                     theme = 'dark';
                 } else {
-                    body.classList.remove('dark');
+                    document.documentElement.classList.remove('dark');
                     localStorage.setItem('theme', 'light');
                     themeToggler.textContent = '🌚';
                     theme = 'light';

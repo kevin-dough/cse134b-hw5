@@ -17,3 +17,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+
+<script>
+    let theme = localStorage.getItem('theme');
+    console.log(theme);
+    if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+    }
+</script>
