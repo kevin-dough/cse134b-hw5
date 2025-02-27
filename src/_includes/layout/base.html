@@ -38,7 +38,7 @@
         </button>
         <noscript>Turn your Javascript on!</noscript>
     </header>
-    <nav id="hamburgerNavMenu">
+    <nav id="hamburgerNavMenu" style="display: none;">
         <ul id="hamburgerNavList">
             <li>
                 <a href="/">HOME</a>
@@ -100,7 +100,7 @@
         console.log(themeToggles);
         const body = document.querySelector('body');
         
-        document.getElementById("hamburgerNavMenu").style.display = "none";
+        
         document.addEventListener("DOMContentLoaded", (event) => {
 
             let url = window.location.pathname;
@@ -114,6 +114,8 @@
                     link.classList.remove('active');
                 }
             });
+
+            // document.getElementById("hamburgerNavMenu").style.display = "none";
             themeToggles.forEach(themeToggler => {
                 themeToggler.textContent = theme === 'light' ? '🌚' : '🌞';
             });
