@@ -125,15 +125,11 @@
                     localStorage.setItem('theme', 'dark');
                     themeToggler.textContent = '🌞';
                     theme = 'dark';
-                    document.getElementById("navLogoImg").src = "/.netlify/images?url=/images/dark-logo.png&h=30&q=80";
-                    document.getElementById("bannerImg").src = "/.netlify/images?url=/images/dark-logo-banner.png&h=400&q=85";
                 } else {
                     document.documentElement.classList.remove('dark');
                     localStorage.setItem('theme', 'light');
                     themeToggler.textContent = '🌚';
                     theme = 'light';
-                    document.getElementById("navLogoImg").src = "/.netlify/images?url=/images/logo.png&h=30&q=80";
-                    document.getElementById("bannerImg").src = "/.netlify/images?url=/images/logo-banner.png&h=400&q=85";
                 }
             });
         });

@@ -23,6 +23,10 @@ html.dark {
     --alt-row-color: #666;
 }
 
+html.dark #navLogoImg {
+    content: url("/.netlify/images?url=/images/dark-logo.png&h=30&q=80");
+}
+
 header {
     padding: 0 2em;
     display: flex;
