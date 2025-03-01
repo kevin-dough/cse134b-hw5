@@ -1,3 +1,7 @@
+html.dark #bannerImg {
+    content: url("/.netlify/images?url=/images/dark-logo-banner.png&h=400&q=85");
+}
+
 services-carousel {
     overflow: auto;
     white-space: nowrap;
