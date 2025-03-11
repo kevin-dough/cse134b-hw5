@@ -24,5 +24,8 @@
     // console.log(theme);
     if (theme === 'dark') {
         document.documentElement.classList.add('dark');
+    } else if (theme === null) {
+        localStorage.setItem('theme', 'light');
+        theme = 'light';
     }
 </script>

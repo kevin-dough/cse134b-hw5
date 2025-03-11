@@ -118,7 +118,7 @@
 
             // document.getElementById("hamburgerNavMenu").style.display = "none";
             themeToggles.forEach(themeToggler => {
-                themeToggler.src = theme === 'light' ? '/images/icons/moon.svg' : '/images/icons/sun.svg';
+                themeToggler.src = theme === 'dark' ? '/images/icons/sun.svg' : '/images/icons/moon.svg';
             });
             
         });
@@ -129,7 +129,7 @@
                     localStorage.setItem('theme', 'dark');
                     themeToggler.src = '/images/icons/sun.svg';
                     theme = 'dark';
-                } else {
+                } else if (theme === 'dark') {
                     document.documentElement.classList.remove('dark');
                     localStorage.setItem('theme', 'light');
                     themeToggler.src = '/images/icons/moon.svg';
