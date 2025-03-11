@@ -12,7 +12,7 @@ services-carousel {
 }
 
 /* using nested */
-services-carousel > div {
+services-carousel > services-card {
     background-color: var(--background-color, #fff);
     max-width: 400px;
     padding: 1rem;
