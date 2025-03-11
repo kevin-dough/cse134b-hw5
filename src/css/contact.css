@@ -4,7 +4,7 @@ form[method="post"] {
     display: flex;
     flex-direction: column;
     gap: 0.3em;
-    margin: 1rem;
+    /* margin: 1rem; */
 }
 
 input, select {

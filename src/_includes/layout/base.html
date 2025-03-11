@@ -5,17 +5,23 @@
 
     {% block head %}{% endblock %}
 
+    <style>
+        main {
+            margin-top: 80px;
+        }
+    </style>
+
 </head>
 <body>
     <header>
-        <div style="display: flex;align-items: center; gap: 1rem;">
+        <div style="display: flex;align-items: center; gap: 1rem; padding-left: 1rem">
             <a id="navLogo" aria-label="go to home screen" href="/"><img id="navLogoImg" src="/.netlify/images?url=/images/logo.png&h=30&q=80" height="30" alt="Summit Detailing logo" draggable="false"></a>
             <h1>SUMMIT DETAILING</h1>
         </div>
         <nav id="navMenu">
             <ul id="navList">
                 <li>
-                    <a href="/">HOME</a> <!-- set links to active with javascript -->
+                    <a href="/">HOME</a>
                 </li>
                 <li>
                     <a href="/about">ABOUT</a>
@@ -27,13 +33,11 @@
                     <a href="/services">SERVICES</a>
                 </li>
                 <li>
-                    <button class="themeToggle">
-                        🌚
-                    </button>
+                    <img class="themeToggle" src="/images/icons/moon.svg" height="30">
                 </li>
             </ul>    
         </nav>
-        <button id="hamburger">
+        <button id="hamburger" style="margin-right:1rem">
             ☰
         </button>
         <noscript>Turn your Javascript on!</noscript>
@@ -54,7 +58,7 @@
             </li>
             <li>
                 <button class="themeToggle">
-                    🌚
+                    <img class="themeToggle" src="/images/icons/moon.svg" height="30">
                 </button>
             </li>
         </ul>    
@@ -73,7 +77,7 @@
             let menu = document.getElementById("hamburgerNavMenu");
             menu.style.display = menu.style.display === "block" ? "none" : "block";
             themeToggles.forEach(themeToggler => {
-                themeToggler.textContent = theme === 'light' ? '🌚' : '🌞';
+                themeToggler.src = theme === 'light' ? '/images/icons/moon.svg' : '/images/icons/sun.svg';
             });
         });
 
@@ -114,7 +118,7 @@
 
             // document.getElementById("hamburgerNavMenu").style.display = "none";
             themeToggles.forEach(themeToggler => {
-                themeToggler.textContent = theme === 'light' ? '🌚' : '🌞';
+                themeToggler.src = theme === 'light' ? '/images/icons/moon.svg' : '/images/icons/sun.svg';
             });
             
         });
@@ -123,12 +127,12 @@
                 if (theme === 'light') {
                     document.documentElement.classList.add('dark');
                     localStorage.setItem('theme', 'dark');
-                    themeToggler.textContent = '🌞';
+                    themeToggler.src = '/images/icons/sun.svg';
                     theme = 'dark';
                 } else {
                     document.documentElement.classList.remove('dark');
                     localStorage.setItem('theme', 'light');
-                    themeToggler.textContent = '🌚';
+                    themeToggler.src = '/images/icons/moon.svg';
                     theme = 'light';
                 }
             });
