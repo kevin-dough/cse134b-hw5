@@ -52,7 +52,7 @@ section {
 
 header h1 {
     letter-spacing: 3px;
-    font-size: 2em;
+    font-size: 2vw;
     width: 100%;
 }
 
@@ -67,7 +67,7 @@ header h1 {
 }
 
 #navMenu {
-    margin-right:1rem;
+    margin-right:2.3vw;
     /* display: flex; */
     /* align-items: center;
     flex-grow: 1;
@@ -96,14 +96,14 @@ header h1 {
     #hamburgerNavList {
         flex-direction: column !important;
     }
+    header h1 {
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width: 1020px) {
     #bannerImg {
         height: 200px;
-    }
-    header h1 {
-        font-size: 1.3em;
     }
 }
 
