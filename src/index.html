@@ -23,11 +23,11 @@ layout: layout/home.html
     </section>
     <section>
         <div style="padding: 0 1rem; display: flex; justify-content: end; gap: 1rem">
-            <button style="background-color: var(--secondary-color); border-radius: 0.6rem 0.6rem 0 0; font-size: 0.7rem">Load Local</button>
-            <button style="background-color: var(--secondary-color); border-radius: 0.6rem 0.6rem 0 0; font-size: 0.7rem">Load Remote</button>
+            <button style="background-color: var(--secondary-color); border-radius: 0.6rem 0.6rem 0 0; font-size: 0.7rem" onclick="handleLocal()">Load Local</button>
+            <button style="background-color: var(--secondary-color); border-radius: 0.6rem 0.6rem 0 0; font-size: 0.7rem" onclick="handleRemote()">Load Remote</button>
         </div>
         <services-carousel>
-            <div>
+            <!-- <services-card>
                 <img class="carousel-image" src="/.netlify/images?url=/images/supra.avif&w=400&nf_resize=smartcrop&q=85" alt="example washed car" draggable="false">
                 <div>
                     <h3>Exterior Package</h3>
@@ -52,8 +52,8 @@ layout: layout/home.html
                         </p>
                     </aside>
                 </div>
-            </div>
-            <div>
+            </services-card>
+            <services-card>
                 <img class="carousel-image" src="/.netlify/images?url=/images/truckdog.avif&w=400&nf_resize=smartcrop&q=85" alt="example interior car" draggable="false">
                 <div>
                     <h3>Interior Package</h3>
@@ -77,8 +77,8 @@ layout: layout/home.html
                         </p>
                     </aside>
                 </div>
-            </div>
-            <div>
+            </services-card>
+            <services-card>
                 <img class="carousel-image" src="/.netlify/images?url=/images/corvette.avif&w=400&nf_resize=smartcrop&q=85" alt="example full detail car" draggable="false">
                 <div>
                     <h3>Full Detail Package</h3>
@@ -91,8 +91,8 @@ layout: layout/home.html
                         </p>
                     </aside>
                 </div>
-            </div>
-            <div>
+            </services-card>
+            <services-card>
                 <img class="carousel-image" src="/.netlify/images?url=/images/hatches.avif&w=400&nf_resize=smartcrop&q=85" alt="example ceramic coating" draggable="false">
                 <div>
                     <h3>Ceramic Coating</h3>
@@ -105,8 +105,8 @@ layout: layout/home.html
                         </p>
                     </aside>
                 </div>
-            </div>
-            <div>
+            </services-card>
+            <services-card>
                 <img class="carousel-image" src="/.netlify/images?url=/images/bananatruck.avif&w=400&nf_resize=smartcrop&q=85" alt="example paint correction" draggable="false">
                 <div>
                     <h3>Paint Correction</h3>
@@ -119,7 +119,7 @@ layout: layout/home.html
                         </p>
                     </aside>
                 </div>
-            </div>
+            </services-card> -->
         </services-carousel>
     </section>
     <section style="padding: 2em">
@@ -146,3 +146,99 @@ layout: layout/home.html
         </div>
     </section>
 </main>
+<script>
+    class ServiceCard extends HTMLElement {
+        constructor() {
+        super();
+        }
+
+        connectedCallback() {
+
+            const imagesrc = this.getAttribute('image-src');
+            const imagealt = this.getAttribute('image-alt');
+            const title = this.getAttribute('title');
+            const description = this.getAttribute('description');
+            const includedItems = this.getAttribute('includedItems') || '-1';
+            const price = this.getAttribute('price');
+            const addons = this.getAttribute('add-ons') || '-1';
+
+            // console.log(includedItems);
+
+            const includedItemsList = includedItems.split(',').map(item => `<li>${item}</li>`).join('');
+            const addonsList = addons.split(',').map(addon => `<li>${addon}</li>`).join('');
+            // console.log(includedItemsList);
+
+            const linkUrl = title.toLowerCase().replace(' ', '-');
+
+            this.innerHTML = `
+            <picture>
+                <img class="carousel-image" src="${imagesrc}" alt="${imagealt}" draggable="false">
+            </picture>
+            <div>
+                <h3>${title}</h3>
+                <p><strong>Starting Price: $${price}</strong></p>
+                <p>${description}</p>
+                <div style="padding-bottom: 1rem; display: flex; justify-content: center;">
+                    <a class="cardLink" href="/services/${linkUrl}">Learn More</a>
+                </div>
+                ${includedItems == '-1' ? "" : "<details><summary>What's Included?</summary><ul>" + includedItemsList + "</ul></details>"}
+                <aside>
+                <p>
+                    ${addons == '-1' ? "": "Add-Ons:"+ addonsList}
+                </p>
+                </aside>
+            </div>
+            `;
+
+        }
+    }
+    customElements.define('services-card', ServiceCard);
+
+
+    function populateCards(data) {
+        const carousel = document.querySelector('services-carousel');
+        data.forEach(service => {
+            // console.log(service);
+            const card = document.createElement('services-card');
+            card.setAttribute('image-src', service.image);
+            card.setAttribute('image-alt', service.alt);
+            card.setAttribute('title', service.title);
+            card.setAttribute('description', service.description);
+            if (service.includedItems) {
+                card.setAttribute('includedItems', service.includedItems);
+            }
+            card.setAttribute('price', service.price);
+            if (service.addOns) {
+                card.setAttribute('add-ons', service.addOns);
+            }
+            carousel.appendChild(card);
+        });
+    }
+
+    function handleLocal() {
+        const jsonData = localStorage.getItem("servicesData");
+        if (jsonData) {
+            populateCards(jsonData);
+        } else {
+            alert("No local data found!");
+        }
+    }
+
+    function handleRemote() {
+        binId = "67cf2a8f8561e97a50e97fd6";
+        apiKey = "$2a$10$T96PmOWT.JTYsv20Na6GveotrFhYnSBgmIaXbOYrb0eGGaDLft8.q";
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                const data = JSON.parse(xhr.responseText);
+                localStorage.setItem("servicesData", data.record);
+                populateCards(data.record);
+            }
+        };
+        xhr.open("GET", `https://api.jsonbin.io/v3/b/${binId}/latest`, true);
+        xhr.setRequestHeader("X-Master-Key", apiKey);
+        xhr.send();
+    }
+
+    
+</script>

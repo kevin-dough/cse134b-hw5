@@ -4,14 +4,14 @@
       "image": "/.netlify/images?url=/images/supra.avif&w=400&nf_resize=smartcrop&q=85",
       "alt": "example washed car",
       "description": "Our exterior package includes a full wash and wax of your vehicle. We'll make sure your car is shining like new and looking delicious like this burgermobile!",
-      "whatsIncluded": [
+      "includedItems": [
         "Hand Wash w/ Microfiber Mitt and Snow Foam Soap",
         "Wheel and Tire Cleaning",
         "Tire Dressing",
         "Window Cleaning",
         "Light spray wax for paint protection"
       ],
-      "startingPrice": "$100",
+      "price": "100",
       "addOns": [
         "Clay Bar and Iron Decontamination",
         "Paint Correction",
@@ -23,13 +23,13 @@
       "image": "/.netlify/images?url=/images/truckdog.avif&w=400&nf_resize=smartcrop&q=85",
       "alt": "example interior car",
       "description": "Our interior package includes a full vacuum and shampoo of your vehicle.",
-      "whatsIncluded": [
+      "includedItems": [
         "Full Vacuum",
         "Shampoo of Seats and Carpets",
         "Dashboard, Console, and Door Panel wipedown",
         "Interior Window and Mirror Cleaning"
       ],
-      "startingPrice": "$150",
+      "price": "150",
       "addOns": [
         "Leather Conditioning",
         "Odor Removal",
@@ -41,20 +41,20 @@
       "image": "/.netlify/images?url=/images/corvette.avif&w=400&nf_resize=smartcrop&q=85",
       "alt": "example full detail car",
       "description": "Our full detail package includes both the exterior and interior packages. We'll make sure your car is standing out from the rest of the crowd like a star in the night sky!",
-      "startingPrice": "$190"
+      "price": "190"
     },
     {
       "title": "Ceramic Coating",
       "image": "/.netlify/images?url=/images/hatches.avif&w=400&nf_resize=smartcrop&q=85",
       "alt": "example ceramic coating",
       "description": "Our ceramic coating includes an exterior wash, clay bar treatment, iron decontamination, and paint correction!",
-      "startingPrice": "$700"
+      "price": "700"
     },
     {
       "title": "Paint Correction",
       "image": "/.netlify/images?url=/images/bananatruck.avif&w=400&nf_resize=smartcrop&q=85",
       "alt": "example paint correction",
       "description": "Our paint correction includes an exterior wash, clay bar treatment, iron decontamination, polish, compound, and wax!",
-      "startingPrice": "$400"
+      "price": "400"
     }
   ]

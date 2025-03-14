@@ -28,7 +28,7 @@ services-carousel > services-card {
         align-items: normal;
     }
 
-    & img {
+    & picture > img {
         width: 100%;
         height: 300px;
         display: inline-block;
@@ -36,7 +36,7 @@ services-carousel > services-card {
         transition: transform ease-in-out 0.2s;
     }
 
-    & img:active {
+    & picture > img:active {
         transform: scale(1.1);
     }
 }
@@ -47,3 +47,9 @@ services-carousel > services-card {
                 padding: 1rem;
             }
         }
+
+
+.cardLink {
+    color: var(--primary-color);
+    font-weight: bold;
+}
