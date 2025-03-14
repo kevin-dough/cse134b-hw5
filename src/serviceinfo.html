@@ -1,0 +1,65 @@
+---
+  layout: layout/services.html
+  pagination:
+    data: servicePages
+    size: 1
+    alias: servicePages
+  permalink: 'services/{{servicePages.url}}/index.html'
+---
+
+<main>
+  <h2 class="sidePadding">{{ servicePages.title }}</h2>
+  <section class="sidePadding" style="padding-bottom: 2rem">
+    <h3 style="font-weight: 400">{{ servicePages.subtitle }}</h3>
+    <p>
+      {{ servicePages.description }}
+    </p>
+    <button style="display: {{servicePages.toggle}}" id="switcher">Toggle Tier</button>
+    <p><strong>Price: <span id="price"></span></strong></p>
+    <div class="optionsContainer">
+      {% for option in servicePages.options %}
+        <div class="optionsCard {{option.tiers}}">
+          <h4>{{ option.name }}</h4>
+          <p>{{ option.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    document.getElementById("price").textContent = "$" + priceOptions[0] + "+";
+    if (!optionsList) {
+      switcher.style.display = "none";
+    }
+  });
+
+  let currFilter = "";
+  const priceOptions = {{servicePages.prices}};
+  let idx = -1;
+  const switcher = document.getElementById("switcher");
+  switcher.addEventListener("click", function() {
+    if (currFilter == "basic") currFilter = "premium";
+    else if (currFilter == "premium") currFilter = "premiumPlus";
+    else currFilter = "basic";
+
+    switcher.textContent = currFilter;
+
+    idx++;
+    if (idx == priceOptions.length) idx = 0;
+
+    document.getElementById("price").textContent = "$" + priceOptions[idx] + "+";
+
+    const cards = document.querySelectorAll(".optionsCard");
+    cards.forEach(card => {
+      card.classList.remove("active");
+    });
+    cards.forEach(card => {
+      if (card.classList.contains(currFilter)) {
+        card.classList.add("active");
+      }
+    });
+  });
+  
+</script>

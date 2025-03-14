@@ -168,7 +168,7 @@ layout: layout/home.html
             const addonsList = addons.split(',').map(addon => `<li>${addon}</li>`).join('');
             // console.log(includedItemsList);
 
-            const linkUrl = title.toLowerCase().replace(' ', '-');
+            const linkUrl = title.toLowerCase().replaceAll(' ', '-');
 
             this.innerHTML = `
             <picture>
@@ -218,7 +218,8 @@ layout: layout/home.html
     function handleLocal() {
         const jsonData = localStorage.getItem("servicesData");
         if (jsonData) {
-            populateCards(jsonData);
+            console.log("local data found");
+            populateCards(JSON.parse(jsonData));
         } else {
             alert("No local data found!");
         }
@@ -231,7 +232,8 @@ layout: layout/home.html
         xhr.onreadystatechange = () => {
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 const data = JSON.parse(xhr.responseText);
-                localStorage.setItem("servicesData", data.record);
+                // console.log(data.record);
+                // localStorage.setItem("servicesData", data.record);
                 populateCards(data.record);
             }
         };

@@ -251,3 +251,13 @@ blockquote {
 main, footer {
     animation: fadeIn 0.3s;
 }
+
+.navigationalButton {
+    text-decoration: none;
+    color: var(--background-color);
+    font-weight: bold;
+    transition: color 0.5s;
+    padding: 0.8em 1.3em;
+    background-color: var(--main-text-color);
+    border-radius: var(--border-radius);
+}

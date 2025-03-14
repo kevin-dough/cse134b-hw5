@@ -25,3 +25,24 @@ h3 {
 tr:nth-child(even) {
     background-color: var(--alt-row-color);
 }
+
+.optionsContainer {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    gap: 1rem;
+    /* justify-content: space-between; */
+}
+
+.optionsCard {
+    background-color: var(--alternate-background-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    /* max-width: 80%; */
+    max-width: 17rem;
+}
+
+.active {
+    background-color: var(--secondary-color);
+}

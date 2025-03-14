@@ -1,0 +1,208 @@
+[
+    {
+        "title": "Exterior Detailing Package",
+        "subtitle": "Bring Back That Showroom Shine!",
+        "url": "exterior-package",
+        "toggle": "block",
+        "prices": "[100, 125, 135]",
+        "description": "Our exterior detailing services are top-notch! We use the best products to make your car shine like new. We offer a variety of services such as waxing, polishing, and ceramic coating. We also offer paint correction services to remove any scratches or swirl marks on your paint. Our exterior detailing services will make your car look brand new!",
+        "options": [
+            {
+                "name": "Hand Wash and Dry",
+                "tiers": "basic premium premiumPlus",
+                "description": "A thorough hand wash using premium car-safe products to ensure that your vehicle’s exterior is cleaned gently yet effectively. We use microfiber towels to dry the surface, preventing water spots and leaving your car with a streak-free shine."
+            },
+            {
+                "name": "Wheel and Tire Cleaning",
+                "tiers": "basic premium premiumPlus",
+                "description": "We clean your vehicle’s wheels and tires to remove dirt, brake dust, and road grime. Our service ensures your rims shine, and the tires are free from build-up, creating a cleaner, more polished look."
+            },
+            {
+                "name": "Tire Dressing",
+                "tiers": "basic premium premiumPlus",
+                "description": "Tire dressing is applied to your vehicle’s tires to restore their rich, black color and provide a sleek, glossy finish. This service also protects the tires from cracking and fading, keeping them looking new for longer."
+            },
+            {
+                "name": "Spray Wax",
+                "tiers": "basic premium",
+                "description": "A quick and easy protective layer for your car’s paint. Spray wax offers a glossy finish and shields your vehicle from the elements, making it more resistant to water spots and dirt buildup. This is a great option for a short-term shine and protection."
+            },
+            {
+                "name": "Clay Bar and Iron Decontamination",
+                "tiers": "premium premiumPlus",
+                "description": "This step involves using a specialized clay bar to remove embedded contaminants, such as tree sap, industrial fallout, and pollutants, that regular washing can’t address. Iron decontamination also targets iron particles stuck to the surface, leaving the paint smooth and ready for polishing. This service is ideal for vehicles that have been exposed to harsh environmental elements."
+            },
+            {
+                "name": "Paste Wax",
+                "tiers": "premiumPlus",
+                "description": "A high-quality paste wax is applied by hand to your vehicle’s paint, providing a deep, glossy shine with long-lasting protection. The wax forms a durable, hydrophobic layer that repels water and protects against UV rays, dirt, and pollutants. This premium service delivers a rich, glossy finish that can last for months."
+            },
+            {
+                "name": "Trim Restoration",
+                "tiers": "premiumPlus",
+                "description": "Faded plastic and rubber trim pieces are restored to their original color with a specialized solution, bringing back the vibrant look and providing long-lasting protection. This treatment helps to prevent cracking, fading, and discoloration, keeping your vehicle looking fresh and well-maintained."
+            }
+        ]
+    },
+    {
+        "title": "Interior Detailing Package",
+        "subtitle": "Transform Your Ride with Our Comprehensive Interior Detailing Services",
+        "url": "interior-package",
+        "toggle": "block",
+        "prices": "[150, 175, 185]",
+        "description": "Our interior detailing services are the best in town! We offer a variety of services to make your car look and feel brand new. We offer services such as vacuuming, shampooing, and leather conditioning. We also offer stain removal services to remove any stains from your seats or carpet.",
+        "options": [
+            {
+                "name": "Vacuuming",
+                "tiers": "basic premium premiumPlus",
+                "description": "We thoroughly vacuum all areas of your vehicle’s interior, including the seats, floors, mats, and trunk, ensuring all dirt, dust, and debris are removed. Our meticulous approach helps maintain a clean and fresh environment, perfect for both comfort and hygiene."
+            },
+            {
+                "name": "Window and Mirror Cleaning",
+                "tiers": "basic premium premiumPlus",
+                "description": "Our service includes cleaning all interior windows and mirrors to a streak-free shine, removing any dirt, fingerprints, or smudges. This helps improve visibility and creates a clearer, more polished interior appearance."
+            },
+            {
+                "name": "Air Vent Cleaning",
+                "tiers": "basic premium premiumPlus",
+                "description": "Dust and debris tend to accumulate in your vehicle’s air vents, affecting air quality. We use specialized tools to clean out these hard-to-reach areas, improving air circulation and ensuring your cabin air is fresh and free of pollutants."
+            },
+            {
+                "name": "Light Stain Removal",
+                "tiers": "basic premium",
+                "description": "For light stains and surface marks on upholstery and carpets, we apply effective cleaning solutions to remove blemishes without damaging the fabric. This restores the look of your interior and leaves it looking cleaner and more inviting."
+            },
+            {
+                "name": "Carpet Shampoo",
+                "tiers": "premium premiumPlus",
+                "description": "We shampoo your vehicle’s carpets to remove deep-seated dirt, stains, and odors, leaving them looking fresh and revitalized. Our carpet cleaning solution lifts and eliminates grime, restoring the softness and vibrancy of your car’s interior flooring."
+            },
+            {
+                "name": "Plastic and Vinyl UV Protection",
+                "tiers": "premium premiumPlus",
+                "description": "Our plastic and vinyl UV protection treatment restores and protects your vehicle’s dashboard, door panels, and trim from harmful UV rays. This service prevents cracking, fading, and discoloration while keeping surfaces looking new and well-maintained."
+            },
+            {
+                "name": "Deep Stain Removal and Extraction",
+                "tiers": "premiumPlus",
+                "description": "For more stubborn stains, we perform an in-depth cleaning process that includes stain extraction, ensuring even the toughest stains are effectively removed from your upholstery and carpets. This service is perfect for deeper, older stains that require extra attention."
+            },
+            {
+                "name": "Pet Hair Removal",
+                "tiers": "premiumPlus",
+                "description": "We specialize in removing pet hair from all fabric surfaces, including seats and carpets, using specialized tools designed to extract even the finest hairs. This service ensures your interior is free from pet-related debris, providing a cleaner, more comfortable environment."
+            },
+            {
+                "name": "Steam Cleaning",
+                "tiers": "premiumPlus",
+                "description": "Our steam cleaning service deep-cleans surfaces, including upholstery and carpets, using high-temperature steam to lift dirt, bacteria, and stains without the use of harsh chemicals. This eco-friendly solution leaves your car interior sanitized and refreshed."
+            }
+        ]
+    },
+    {
+        "title": "Full Detailing Package",
+        "subtitle": "Revitalize Your Ride with Our Comprehensive Detailing Service for a Showroom Finish",
+        "url": "full-detail-package",
+        "toggle": "block",
+        "prices": "[240, 290, 310]",
+        "description": "Our Full Detailing Package is designed to restore your vehicle to its pristine condition, inside and out. We go beyond a simple wash, thoroughly cleaning and treating every surface, from the exterior paint to the interior upholstery. Our expert team uses premium products and techniques to ensure your car looks and feels brand new. Whether it’s removing tough stains, restoring shine, or protecting your vehicle from the elements, our detailing package offers a comprehensive solution that keeps your car in top shape for the long haul.",
+        "options": [
+            {
+                "name": "Hand Wash and Dry",
+                "tiers": "basic premium premiumPlus",
+                "description": "A thorough hand wash using premium car-safe products to ensure that your vehicle’s exterior is cleaned gently yet effectively. We use microfiber towels to dry the surface, preventing water spots and leaving your car with a streak-free shine."
+            },
+            {
+                "name": "Wheel and Tire Cleaning",
+                "tiers": "basic premium premiumPlus",
+                "description": "We clean your vehicle’s wheels and tires to remove dirt, brake dust, and road grime. Our service ensures your rims shine, and the tires are free from build-up, creating a cleaner, more polished look."
+            },
+            {
+                "name": "Tire Dressing",
+                "tiers": "basic premium premiumPlus",
+                "description": "Tire dressing is applied to your vehicle’s tires to restore their rich, black color and provide a sleek, glossy finish. This service also protects the tires from cracking and fading, keeping them looking new for longer."
+            },
+            {
+                "name": "Vacuuming",
+                "tiers": "basic premium premiumPlus",
+                "description": "We thoroughly vacuum all areas of your vehicle’s interior, including the seats, floors, mats, and trunk, ensuring all dirt, dust, and debris are removed. Our meticulous approach helps maintain a clean and fresh environment, perfect for both comfort and hygiene."
+            },
+            {
+                "name": "Window and Mirror Cleaning",
+                "tiers": "basic premium premiumPlus",
+                "description": "Our service includes cleaning all interior windows and mirrors to a streak-free shine, removing any dirt, fingerprints, or smudges. This helps improve visibility and creates a clearer, more polished interior appearance."
+            },
+            {
+                "name": "Air Vent Cleaning",
+                "tiers": "basic premium premiumPlus",
+                "description": "Dust and debris tend to accumulate in your vehicle’s air vents, affecting air quality. We use specialized tools to clean out these hard-to-reach areas, improving air circulation and ensuring your cabin air is fresh and free of pollutants."
+            },
+            {
+                "name": "Light Stain Removal",
+                "tiers": "basic premium",
+                "description": "For light stains and surface marks on upholstery and carpets, we apply effective cleaning solutions to remove blemishes without damaging the fabric. This restores the look of your interior and leaves it looking cleaner and more inviting."
+            },
+            {
+                "name": "Spray Wax",
+                "tiers": "basic premium",
+                "description": "A quick and easy protective layer for your car’s paint. Spray wax offers a glossy finish and shields your vehicle from the elements, making it more resistant to water spots and dirt buildup. This is a great option for a short-term shine and protection."
+            },
+            {
+                "name": "Clay Bar and Iron Decontamination",
+                "tiers": "premium premiumPlus",
+                "description": "This step involves using a specialized clay bar to remove embedded contaminants, such as tree sap, industrial fallout, and pollutants, that regular washing can’t address. Iron decontamination also targets iron particles stuck to the surface, leaving the paint smooth and ready for polishing. This service is ideal for vehicles that have been exposed to harsh environmental elements."
+            },
+            {
+                "name": "Carpet Shampoo",
+                "tiers": "premium premiumPlus",
+                "description": "We shampoo your vehicle’s carpets to remove deep-seated dirt, stains, and odors, leaving them looking fresh and revitalized. Our carpet cleaning solution lifts and eliminates grime, restoring the softness and vibrancy of your car’s interior flooring."
+            },
+            {
+                "name": "Plastic and Vinyl UV Protection",
+                "tiers": "premium premiumPlus",
+                "description": "Our plastic and vinyl UV protection treatment restores and protects your vehicle’s dashboard, door panels, and trim from harmful UV rays. This service prevents cracking, fading, and discoloration while keeping surfaces looking new and well-maintained."
+            },
+            {
+                "name": "Paste Wax",
+                "tiers": "premiumPlus",
+                "description": "A high-quality paste wax is applied by hand to your vehicle’s paint, providing a deep, glossy shine with long-lasting protection. The wax forms a durable, hydrophobic layer that repels water and protects against UV rays, dirt, and pollutants. This premium service delivers a rich, glossy finish that can last for months."
+            },
+            {
+                "name": "Trim Restoration",
+                "tiers": "premiumPlus",
+                "description": "Faded plastic and rubber trim pieces are restored to their original color with a specialized solution, bringing back the vibrant look and providing long-lasting protection. This treatment helps to prevent cracking, fading, and discoloration, keeping your vehicle looking fresh and well-maintained."
+            },
+            {
+                "name": "Deep Stain Removal and Extraction",
+                "tiers": "premiumPlus",
+                "description": "For more stubborn stains, we perform an in-depth cleaning process that includes stain extraction, ensuring even the toughest stains are effectively removed from your upholstery and carpets. This service is perfect for deeper, older stains that require extra attention."
+            },
+            {
+                "name": "Pet Hair Removal",
+                "tiers": "premiumPlus",
+                "description": "We specialize in removing pet hair from all fabric surfaces, including seats and carpets, using specialized tools designed to extract even the finest hairs. This service ensures your interior is free from pet-related debris, providing a cleaner, more comfortable environment."
+            },
+            {
+                "name": "Steam Cleaning",
+                "tiers": "premiumPlus",
+                "description": "Our steam cleaning service deep-cleans surfaces, including upholstery and carpets, using high-temperature steam to lift dirt, bacteria, and stains without the use of harsh chemicals. This eco-friendly solution leaves your car interior sanitized and refreshed."
+            }
+        ]
+    },
+    {
+        "title": "Ceramic Coating",
+        "subtitle": "Long-lasting Shine, Ultimate Protection, and Enhanced Durability",
+        "url": "ceramic-coating",
+        "toggle": "none",
+        "prices": "[700]",
+        "description": "Our Ceramic Coating service provides your vehicle with a durable, high-performance layer of protection that repels water, dirt, and contaminants while maintaining a glossy, just-waxed finish. Applied by our skilled professionals, the ceramic coating bonds to your vehicle’s paint, forming a shield that guards against scratches, UV damage, and harsh weather conditions. Whether you’re looking to preserve your car’s appearance or make cleaning easier, our ceramic coating ensures long-lasting protection, making your car look pristine for years to come."
+    },
+    {
+        "title": "Paint Correction",
+        "subtitle": "Eliminate Imperfections and Enhance Your Vehicle’s Finish",
+        "url": "paint-correction",
+        "toggle": "none",
+        "prices": "[400]",
+        "description": "Our Paint Correction service is designed to revitalize your vehicle’s paint by removing imperfections such as swirl marks, scratches, and water spots. Using advanced polishing techniques, we restore clarity and smoothness to the surface, giving your car a refreshed, glossy finish. Whether your vehicle has been exposed to the elements or simply needs a deep refresh, our expert team will bring out the true depth and vibrancy of your paint. With our paint correction service, your car will look its absolute best, with enhanced protection and a more polished appearance."
+    }
+]
