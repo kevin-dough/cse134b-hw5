@@ -39,21 +39,21 @@ layout: layout/contact.html
             <label for="package-select">Choose a package:</label>
             <select id="package-select" name="package-select">
                 <optgroup label="Interior Detailing">
-                    <option>Basic Interior Package ($150)</option>
-                    <option>Premium Interior Package ($180)</option>
-                    <option>Premium Plus Interior Package ($195)</option>
-                    </optgroup>
-                    <optgroup label="Exterior Detailing">
-                    <option>Basic Exterior Package ($100)</option>
-                    <option>Premium Exterior Package ($140)</option>
-                    <option>Premium Plus Exterior Package ($160)</option>
-                    </optgroup>
-                    <optgroup label="Full Detailing">
-                        <option>Basic Full Detail Package ($240)</option>
-                        <option>Premium Full Detail Package ($290)</option>
-                        <option>Premium Plus Full Detail Package ($330)</option>
-                    </optgroup>
-            </select>
+                  <option value="basic-interior">Basic Interior Package ($150)</option>
+                  <option value="premium-interior">Premium Interior Package ($180)</option>
+                  <option value="premium-plus-interior">Premium Plus Interior Package ($195)</option>
+                </optgroup>
+                <optgroup label="Exterior Detailing">
+                  <option value="basic-exterior">Basic Exterior Package ($100)</option>
+                  <option value="premium-exterior">Premium Exterior Package ($140)</option>
+                  <option value="premium-plus-exterior">Premium Plus Exterior Package ($160)</option>
+                </optgroup>
+                <optgroup label="Full Detailing">
+                  <option value="basic-full">Basic Full Detail Package ($240)</option>
+                  <option value="premium-full">Premium Full Detail Package ($290)</option>
+                  <option value="premium-plus-full">Premium Plus Full Detail Package ($330)</option>
+                </optgroup>
+              </select>
             <output class="errorMessage" id="packageError"></output>
             <output class="infoMessage" id="packageInfo"></output>
             <fieldset style="border: 1px solid black; border-radius: 0.5em; margin: 0.4em;">
@@ -118,6 +118,19 @@ layout: layout/contact.html
         </form>
     </section>
 </main>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedPackage = urlParams.get('package');
+    console.log(selectedPackage);
+    if (selectedPackage) {
+    const packageSelect = document.getElementById('package-select');
+    const optionToSelect = packageSelect.querySelector(`option[value="${selectedPackage}"]`);
+    if (optionToSelect) {
+      optionToSelect.selected = true;
+    }
+  }
+</script>
 
 <script>
     const form_errors = [];
