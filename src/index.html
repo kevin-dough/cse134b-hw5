@@ -233,7 +233,7 @@ layout: layout/home.html
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 const data = JSON.parse(xhr.responseText);
                 // console.log(data.record);
-                localStorage.setItem("servicesData", data.record);
+                localStorage.setItem("servicesData", JSON.stringify(data.record));
                 populateCards(data.record);
             }
         };
